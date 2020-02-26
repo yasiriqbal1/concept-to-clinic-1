@@ -32,3 +32,15 @@ notifications:
   slack:
     rooms:
       secure: d/3HSFNM8Z6+Cs6dyeVn9DyJo9xf+N6BL6MuEksvTo5lrx7xGp/heZzZglyXyOysxmoqTghKBsWKt1GXlRqeMcHciuZIe8tgoYr8/kDPUGiUT8w32AOA13mSaAnDc8szjTGZwGuqIm1qV4Ixwg+hwgO5LATRhnu5N1iWpiXmXanVJ1toBJEWfj6OrlHKgE8hFvhkGD1LvWL4BkeVhH5dMGWtTgQe+dAtqXd/R0YRkV9TbhJsZt2oQR9PKabJqpK5J6aUG2RdB3AIXNyrE6b3dZbGX3GrJIhce7e4e4ORIJn/wEAdejVwL0YllX5j27oZGiXfzbw2zdGLC9K8GQEMOuq92X+vuV+jsO2D8CPOl+fPnsgHq3UkQcFYTtRCk9WQQqDv5QksfvRH/2pI9H4DkW+h/oAmkLiPvg0/E9AH6Q3N9pEFGZnWaGaPG6BcgnXsMn9XwGa4UP/R6btZKEnuoQD73nT8DnjDnsLbz3y3fAA0hyAlYrZ1nF4SA0qvqqC2H2Mae3Lk9FN0MjZHsVrHmOJNyEZHDXhbQmDpHe67YVpeoY4gGPFAHxosszUp5Svkfv8SWyZAcxPsOx+hDaDLgSEFsCtDCnm9X7iT3ksGhubzHCFJI+xe0u/nZ5D3xPemrZQTu+sgqRswvaQa5/naOL1HwQtHq9raOC/KfbbjoAw=
+deploy:
+provider: elasticbeanstalk
+region: "eu-west-1"
+app:  "Docker"
+env:  "Docker-env"
+bucket_name:  elasticbeanstalk-eu-west-1-356691889002
+bucket_path:  "docker"
+on:
+  branch: master
+access_key_id:  $AWS_ACCESS_KEY
+secret_access_key:
+  secure: "$AWS_SECRET_KEY"  
